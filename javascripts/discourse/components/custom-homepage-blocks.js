@@ -4,10 +4,10 @@ import { getOwner } from "@ember/application";
 
 const componentNameOverrides = {
   // avoids name collision with core's custom-html component
-  "custom-html": "custom-html-rsb",
+  "custom-html": "custom-html-chb",
 };
 
-export default class RightSidebarBlocks extends Component {
+export default class CustomHomepageBlocks extends Component {
   @tracked blocks = [];
 
   constructor() {
@@ -22,7 +22,7 @@ export default class RightSidebarBlocks extends Component {
           : block.name;
 
       if (getOwner(this).hasRegistration(`component:${block.internalName}`)) {
-        block.classNames = `rs-component rs-${block.name}`;
+        block.classNames = `custom-homepage-blocks__block ${block.name}__wrapper`;
         block.parsedParams = {};
         if (block.params) {
           block.params.forEach((p) => {

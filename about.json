@@ -1,13 +1,15 @@
 {
-  "name": "discourse-right-sidebar-blocks",
+  "name": "Custom Homepage Blocks",
   "component": true,
-  "authors": "Discourse",
-  "license_url": "TODO",
-  "about_url": "TODO",
-  "learn_more": "TODO",
+  "authors": "Manuel Kostka",
+  "license_url": "",
+  "about_url": "",
+  "learn_more": "",
   "theme_version": "0.0.1",
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
   "assets": {},
-  "modifiers": {}
+  "modifiers": {
+    "custom_homepage": "true"
+  }
 }

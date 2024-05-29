@@ -1,0 +1,17 @@
+.top-contributors {
+  &__user {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: auto 10%;
+    grid-template-areas: "left right";
+    grid-column-gap: 1em;
+    cursor: pointer;
+  }
+  &__user-badge {
+    grid-area: left;
+  }
+  &__user-likes {
+    grid-area: right;
+    justify-self: end;
+  }
+}

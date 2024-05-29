@@ -1,2 +1,8 @@
 node_modules
 .discourse-site
+.yarn
+.eslintrc.cjs
+.prettierrc.cjs
+.gitignore
+.template-lintrc.cjs
+.yarnrc.yml

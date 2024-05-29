@@ -1,0 +1,28 @@
+// Top topics + Tag topics
+.tag-topics__topic,
+.top-topics__topic {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @extend .recent-replies--reply;
+}
+
+.tag-topics__date,
+.top-topics__date {
+  @extend .recent-replies--date;
+}
+
+.tag-topics__col,
+.top-topics__col {
+  &:first-child {
+    margin-right: 0.5em;
+    flex-shrink: 1;
+    max-width: 80%;
+    word-break: break-word;
+  }
+}
+
+.tag-topics__category,
+.top-topics__category {
+  width: 100%;
+  margin-top: 0.375em;
+}
