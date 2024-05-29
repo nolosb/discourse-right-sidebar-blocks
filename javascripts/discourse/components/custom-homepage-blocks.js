@@ -22,7 +22,7 @@ export default class CustomHomepageBlocks extends Component {
           : block.name;
 
       if (getOwner(this).hasRegistration(`component:${block.internalName}`)) {
-        block.classNames = `custom-homepage-blocks__block ${block.name}__wrapper`;
+        block.classNames = `homepage-blocks__block ${block.name}__wrapper`;
         block.parsedParams = {};
         if (block.params) {
           block.params.forEach((p) => {

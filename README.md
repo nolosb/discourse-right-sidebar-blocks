@@ -1,6 +1,6 @@
-# Custom Homepage Blocks
+# Homepage Blocks
 
-Adds ability to display components as blocks on the custom homepage route. The settings editor allows you to choose the blocks to display and adjust their ordering.
+Adds ability to display components as blocks on the custom homepage route. On the settings editor you choose the blocks to display and adjust their ordering.
 
 ### Included blocks
 
