@@ -1,9 +1,6 @@
-# Right Sidebar Blocks
+# Custom Homepage Blocks
 
-Adds ability to display a right-sided sidebar to topic list routes. There are two settings included:
-
-- `blocks`: choose the blocks to display and adjust their ordering
-- `show_in_routes`: decide which routes to display the sidebar (by default, it will show on all lists except for `/categories`)
+Adds ability to display components as blocks on the custom homepage route. The settings editor allows you to choose the blocks to display and adjust their ordering.
 
 ### Included blocks
 
@@ -14,7 +11,6 @@ This theme component includes a few blocks you can use in your sidebar:
 - recent-replies
 - category-topics
 - custom-html
-- subcategory-list
 - tag-topics
 - top-topics
 - category-list
@@ -26,7 +22,7 @@ You can also use other Ember components as blocks, you just need to use the corr
 You can control some features for the provided blocks via parameters.
 
 | name                        | description                           | default        | value                                            | available for                    |
-|-----------------------------|---------------------------------------|----------------| ------------------------------------------------ |----------------------------------|
+| --------------------------- | ------------------------------------- | -------------- | ------------------------------------------------ | -------------------------------- |
 | count                       | limits number of results              | varies         | number                                           | all except custom-html           |
 | excerptLimit                | limits length of each reply excerpt   | 150            | number                                           | recent-replies                   |
 | id                          | category id                           |                | category id (category-list uses comma-separated) | category-topics, category-list   |
@@ -38,6 +34,6 @@ You can control some features for the provided blocks via parameters.
 | tag                         | which tag to display                  |                | tag id                                           | tag-topics                       |
 | period                      | time period of top topics             | weekly         | all, yearly, quarterly, monthly, weekly, daily   | top-topics                       |
 | title                       | title of the block                    | varies         | string                                           | tag-topics, category-list        |
-| excludedGroupNames          | Excludes specified groups             |            | Group names                                      | top-contributors                 |
-| order                       | Orders the contributors               | likes_received | String (likes_received or likes_given)       | top-contributors                 |
+| excludedGroupNames          | Excludes specified groups             |                | Group names                                      | top-contributors                 |
+| order                       | Orders the contributors               | likes_received | String (likes_received or likes_given)           | top-contributors                 |
 | period                      | Time period for top contributors      | yearly         | all, yearly, quarterly, monthly, weekly, daily   | top-contributors                 |
