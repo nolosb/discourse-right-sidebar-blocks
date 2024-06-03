@@ -1,14 +1,34 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { getOwner } from "@ember/application";
+import { hash } from "@ember/helper";
+import PluginOutlet from "discourse/components/plugin-outlet";
 
 const componentNameOverrides = {
   // avoids name collision with core's custom-html component
   "custom-html": "custom-html-chb",
 };
 
-export default class CustomHomepageBlocks extends Component {
+export default class HomepageBlocks extends Component {
   @tracked blocks = [];
+
+  <template>
+    <div class="homepage-blocks__wrapper">
+      <PluginOutlet @name="above-homepage-blocks" />
+
+      {{#each this.blocks as |block|}}
+        <div class={{block.classNames}}>
+          {{component block.internalName params=block.parsedParams}}
+        </div>
+        <PluginOutlet
+          @name="below-custom-homepage-block"
+          @outletArgs={{hash block=block}}
+        />
+      {{/each}}
+
+      <PluginOutlet @name="below-homepage-blocks" />
+    </div>
+  </template>
 
   constructor() {
     super(...arguments);
